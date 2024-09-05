@@ -16,7 +16,7 @@ Enumeration of images is the same as FFHQ. This enables usage of supporting data
 
 More information of the images can be obtained via [ffhq-dataset-v2.json](https://github.com/NVlabs/ffhq-dataset?tab=readme-ov-file#overview) provided by FFHQ.
 
-## Image Resolutions. 
+## Image Resolutions
 ![Image Resolutions](./fpxl-image-resolutions.png)
 
 
