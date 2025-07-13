@@ -8,15 +8,23 @@
 
 ![Teaser image](./fpxl-teaser.png)
 
-This is a cropped and resized subset of [FFHQ](https://github.com/NVlabs/ffhq-dataset). The image resolutions are the same as [SDXL](https://arxiv.org/abs/2307.01952) mixed-aspect ratio finetuning as indicated in Appendix I. 
+This dataset is a **cropped and resized subset of the [FFHQ dataset](https://github.com/NVlabs/ffhq-dataset)**, featuring high-quality facial images tailored for advanced computer vision tasks. The images maintain the same resolution specifications as the **[SDXL model](https://arxiv.org/abs/2307.01952)** mixed-aspect ratio finetuning (approximately **1 megapixel**).
 
-Enumeration of images is the same as FFHQ. This enables usage of supporting datasets/libraries such as [DCGM/ffhq-features-dataset](https://github.com/DCGM/ffhq-features-dataset)
+Image enumeration follows the original **FFHQ numbering scheme**, allowing seamless integration with related datasets and tools such as the **[DCGM/ffhq-features-dataset](https://github.com/DCGM/ffhq-features-dataset)**.
 
+The dataset curation process includes:  
+- Filtering with **MTCNN face detection** to ensure accurate face localization.  
+- Performing precise **face alignment** to standardize facial orientation.  
+- Cropping images to center the face horizontally and position it at approximately **1/3 from the top vertically** for consistent framing.  
+- Standardizing image resolutions to conform with **SDXL model requirements (~1 megapixel)**, optimizing compatibility for portrait generation, facial recognition, and synthetic data augmentation research.
 
-
-More information of the images can be obtained via [ffhq-dataset-v2.json](https://github.com/NVlabs/ffhq-dataset?tab=readme-ov-file#overview) provided by FFHQ.
+For more detailed metadata and image information, refer to the **[ffhq-dataset-v2.json](https://github.com/NVlabs/ffhq-dataset?tab=readme-ov-file#overview)** provided by FFHQ.
 
 ## Image Resolutions
+
+
+All images are processed to match **SDXL training specifications** (~1MP):
+
 ![Image Resolutions](./fpxl-image-resolutions.png)
 
 
@@ -24,6 +32,26 @@ More information of the images can be obtained via [ffhq-dataset-v2.json](https:
 
 Thank you to the authors of the FFHQ dataset.
 
+
+## Citation (BibTeX)
+
+If you use the FPXL dataset in your research, please cite:
+
+```bibtex
+@inproceedings{Ulusan2025SynData4CV,  
+  author        = {Ulusan, Koray and Kiefer, Benjamin},
+  title         = {{Generating Synthetic Data via Augmentations for Improved Facial Resemblance in DreamBooth and InstantID}},
+  booktitle     = {Proceedings of the CVPR 2025 Workshop on Synthetic Data for Computer Vision (SynData4CV)},
+  year          = {2025},
+  month         = {May},
+  url           = {https://openreview.net/forum?id=2o0RxrcV23},
+  note          = {Accepted to the CVPR 2025 SynData4CV Workshop},
+  eprint        = {2505.03557},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  doi           = {10.48550/arXiv.2505.03557}
+}
+```
 
 ## Licenses
 
